@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const catImagesContainer = document.getElementById('cat-images');
 
     
-    async function fetchCatImages() {
+    async function getCatImages() {
         const apiUrl = 'https://api.thecatapi.com/v1/images/search?limit=10';
 
         try {
@@ -33,6 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
         catImagesContainer.innerHTML = '';
     }
     
-    fetchButton.addEventListener('click', fetchCatImages);
+    fetchButton.addEventListener('click', getCatImages);
     clearButton.addEventListener('click', clearImages);
 });
